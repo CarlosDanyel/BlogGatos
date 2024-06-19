@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.display {
+  max-width: 76.4375rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+header {
+  background: #065e7c;
+}
+
+header .containerHeader {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.59375rem;
+
+  padding: 1rem 0;
+}
+
+.containerHeader > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 62.4375rem;
+}
+.containerHeader input {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.25rem;
+
+  font-size: 16px;
+  color: #ffffff;
+
+  padding-left: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.containerHeader input::placeholder {
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.containerHeader input:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 0.125rem #034961;
+}
+
+main .containerGrid {
+  display: grid;
+  grid-template-columns: 1fr 24rem;
+  column-gap: 2.125rem;
+
+  padding: 2.75rem 0 2.4375rem 0;
+}
+
+.containerGrid .contentPost {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentPost > img {
+  width: 100%;
+  object-fit: cover;
+
+  border-radius: 0.5rem;
+  height: 25.3125rem;
+
+  box-sizing: initial;
+}
+.contentPost .likeContainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 1.9375rem 0;
+}
+
+.likeContainer strong {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 160%;
+  color: #202024;
+}
+
+.likeContainer .btnLike {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.likeContainer .btnLike button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background: #065e7c;
+
+  border-radius: 50%;
+  border: navajowhite;
+
+  cursor: pointer;
+}
+
+.contentPost p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #121214;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside strong {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 160%;
+
+  color: #202024;
+}
+
+aside .listaDePost {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.listaDePost li {
+  display: flex;
+  gap: 1rem;
+}
+.listaDePost li > img {
+  border-radius: 5px;
+
+  box-sizing: initial;
+}
+
+.listaDePost li .cardTextPostList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.953125rem;
+
+  box-sizing: initial;
+}
+
+li .cardTextPostList b {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 160%;
+
+  color: #202024;
+}
+
+li .cardTextPostList p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 160%;
+
+  color: #202024;
+}
+
+footer {
+  background: #387e96;
+  text-align: center;
+  padding: 1.65625rem 0;
+}
+
+footer span {
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: content-box;
+}
+
+@media (max-width: 868px) {
+  .display {
+    padding: 0 0.9375rem;
+  }
+  main .containerGrid {
+    grid-template-columns: 1fr;
+    gap: 2.125rem;
+  }
+}
+
+@media (max-width: 430px) {
+  main .display {
+    padding: 0;
+  }
+
+  main .containerGrid {
+    padding-top: 0;
+  }
+
+  .contentPost > img {
+    border-radius: 0;
+    box-sizing: initial;
+
+    height: 219px;
+  }
+
+  .contentPost .likeContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    padding: 0 0 0 1.375rem;
+  }
+  .contentPost p {
+    padding: 0 1rem 0 1.375rem;
+  }
+
+  aside {
+    padding: 0 1rem 0 1.375rem;
+  }
+}
